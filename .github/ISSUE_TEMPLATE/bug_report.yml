@@ -1,0 +1,38 @@
+name: 问题反馈
+description: 报告 OpenAhoy 使用问题，请勿提交秘密或用户数据。
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: OpenAhoy 版本
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 涉及平台
+      options:
+        - 公众号
+        - X
+        - 账号或通用界面
+        - 安装或更新
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题和复现步骤
+      description: 请写预期和实际结果，不粘贴文章、账号 ID、密钥或原始日志。
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: 已脱敏的诊断摘要（可选）
+      description: 只粘贴已检查的安全摘要。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 公开可见内容检查
+      options:
+        - label: 我确认没有提交密钥、账号信息、文章正文或其他私人数据。
+          required: true
